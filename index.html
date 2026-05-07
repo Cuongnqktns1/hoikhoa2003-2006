@@ -17,13 +17,28 @@
                 <h3>Trường THPT 1/5 Nghĩa Đàn</h3>
             </div>
             
-            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbzcSNtG62JIDfQ8w4mBrrz3V-f41WhD6QS4ARFyRdzaXTTq_WZS-Y94dusHFdrjcM-x/exec" method="POST">
+            <form id="registrationForm" action="DÁN_LINK_WEB_APP_URL_CỦA_ANH_TẠI_ĐÂY" method="POST">
                 <p class="sub-title">Vui lòng điền thông tin để Ban Liên Lạc chuẩn bị áo và hậu cần chu đáo nhất.</p>
                 <hr>
 
                 <div class="input-group">
                     <label>Họ và Tên</label>
                     <input type="text" name="fullname" placeholder="VD: Nguyễn Văn A" required>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <div class="input-group" style="flex: 1;">
+                        <label>Giới tính</label>
+                        <select name="gender" required>
+                            <option value="">-- Chọn --</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="input-group" style="flex: 1;">
+                        <label>Cân nặng (kg)</label>
+                        <input type="number" name="weight" placeholder="VD: 65" required>
+                    </div>
                 </div>
 
                 <div class="input-group">
@@ -82,7 +97,6 @@
 
             fetch(form.action, { method: 'POST', body: new FormData(form) })
             .then(response => {
-                // Ẩn form và hiện thông báo thành công
                 formSection.style.display = 'none';
                 successSection.style.display = 'block';
                 window.scrollTo(0, 0);
