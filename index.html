@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Thông Tin Hội Khóa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registrationForm">
+            <h2>THÔNG TIN HỘI KHÓA</h2>
+            <p>Vui lòng điền đầy đủ thông tin bên dưới để Ban Liên Lạc chuẩn bị áo và hậu cần chu đáo nhất.</p>
+            <hr>
+
+            <div class="input-group">
+                <label for="fullname">Họ và Tên</label>
+                <input type="text" id="fullname" name="fullname" placeholder="VD: Nguyễn Văn A" required>
+            </div>
+
+            <div class="input-group">
+                <label for="class">Lớp</label>
+                <input type="text" id="class" name="class" placeholder="VD: 12A1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" placeholder="Số điện thoại Zalo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="address">Địa chỉ hiện tại</label>
+                <input type="text" id="address" name="address" placeholder="Thành phố/Tỉnh đang ở" required>
+            </div>
+
+            <div class="input-group">
+                <label for="size">Size áo hội khóa</label>
+                <select id="size" name="size" required>
+                    <option value="">-- Chọn size áo --</option>
+                    <option value="S">Size S</option>
+                    <option value="M">Size M</option>
+                    <option value="L">Size L</option>
+                    <option value="XL">Size XL</option>
+                    <option value="XXL">Size XXL</option>
+                    <option value="3XL">Size 3XL (Ngoại cỡ)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Gửi thông tin</button>
+        </form>
+    </div>
+</body>
+</html>
