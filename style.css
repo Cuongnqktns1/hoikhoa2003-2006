@@ -1,125 +1,139 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #fff5f5; /* Màu nền hồng nhạt nhẹ nhàng */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffafa;
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
-    position: relative;
-    overflow-x: hidden;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Cành phượng góc trên bên phải */
-.phuong-vi-top {
+/* Trang trí cành phượng bằng hình ảnh ổn định hơn */
+.canh-phuong {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 150px;
-    background-image: url('https://www.transparentpng.com/download/flower/red-flowers-png-free-download-23.png');
+    width: 250px;
+    height: 200px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Delonix_regia_flowers.png/640px-Delonix_regia_flowers.png');
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.7;
+    z-index: 0;
+    opacity: 0.8;
+    pointer-events: none;
 }
 
-/* Cành phượng góc dưới bên trái */
-.phuong-vi-bottom {
-    position: absolute;
-    bottom: -20px;
-    left: -20px;
-    width: 150px;
-    height: 120px;
-    background-image: url('https://www.transparentpng.com/download/flower/red-flowers-png-free-download-23.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotate(180px);
-    z-index: -1;
-    opacity: 0.6;
+.top-right {
+    top: -20px;
+    right: -20px;
+}
+
+.bottom-left {
+    bottom: -40px;
+    left: -40px;
+    transform: rotate(180deg);
 }
 
 .container {
     background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(214, 44, 44, 0.15);
-    max-width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(214, 44, 44, 0.1);
+    max-width: 480px;
     width: 100%;
-    border-top: 5px solid #d62c2c; /* Đường viền đỏ màu hoa phượng */
-    z-index: 1;
+    border-top: 8px solid #d62c2c;
+    position: relative;
+    z-index: 10;
 }
 
 .header-logo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 h2 {
     color: #d62c2c;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+    letter-spacing: 0.5px;
 }
 
 h3 {
-    color: #2c3e50;
-    font-size: 1rem;
-    margin-top: 0;
+    color: #444;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
 }
 
 .sub-title {
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 0.95rem;
+    color: #666;
     text-align: center;
-    font-style: italic;
+    margin: 15px 0;
 }
 
 .input-group {
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     font-weight: 600;
-    color: #444;
+    color: #333;
+    font-size: 0.9rem;
 }
 
 input, select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     box-sizing: border-box;
     font-size: 1rem;
+    background-color: #fdfdfd;
 }
 
 input:focus {
     border-color: #d62c2c;
     outline: none;
-    box-shadow: 0 0 5px rgba(214, 44, 44, 0.2);
+    background-color: #fff;
 }
 
 .btn-submit {
     width: 100%;
-    padding: 15px;
-    background-color: #d62c2c;
+    padding: 16px;
+    background: linear-gradient(135deg, #e63946 0%, #d62c2c 100%);
     color: white;
     border: none;
-    border-radius: 8px;
-    margin-top: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
     font-size: 1.1rem;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(214, 44, 44, 0.3);
+    transition: all 0.3s ease;
 }
 
 .btn-submit:hover {
-    background-color: #b02323;
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(214, 44, 44, 0.4);
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #eee;
-    margin: 15px 0;
+    border-top: 1px dashed #ddd;
+    margin: 20px 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .canh-phuong {
+        width: 150px;
+        height: 120px;
+    }
 }
